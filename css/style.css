@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: Arial, sans-serif;
+}
+
+li:hover{
+  transition: all .3s;
+  background-color: white;
+  cursor: pointer;
+}
+
+li > i:hover{
+  transition: all .3s;
+  color: red;
+}

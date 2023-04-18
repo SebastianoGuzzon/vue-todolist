@@ -9,11 +9,34 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Vue.js link -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Vue to Dolist</title>
 </head>
 <body>
+  <div id="app">
+    
+    <!-- Input di un Task -->
+    <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Scrivi un task...">  
   
+  <!-- Bottone per aggiungere un nuovo task -->
+  <button @click="addTask">Aggiungi</button>
+  
+  <!-- Lista dei task -->
+  <ul>
+    <li v-for="(task, index) in tasks" :key="index">
+      <div class="task-content" @click="task.done = !task.done">
+        <span :class="{ 'task-text': true, 'done': task.done }">{{ task.text }}</span>
+      
+      </div>
+      <button class="delete-btn" @click.stop="removeTask(index)">x</button>
+    </li>
+  </ul>
+  
+  
+  <!-- Non ci sono task -->
+  <h2 v-if="tasks.length === 0"> Non ci sono task</h2>
   
   
   <script src="js/script.js"></script>
