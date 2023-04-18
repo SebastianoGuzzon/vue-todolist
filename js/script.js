@@ -14,11 +14,11 @@ createApp({
       
       // Controlla se la lunghezza del task è inferiore a 5 caratteri
       
-      if (this.newTask.length < 5) {
+      if (this.newTask.length < 3) {
         
         // Oppure messaggio d'errore
         
-        this.errorMsg = "Il testo deve avere almeno 5 caratteri.";
+        this.errorMsg = "Il testo deve avere almeno 3 caratteri.";
       } else {
         // Aggiunge il nuovo task all'inizio dell'array "tasks"
         this.tasks.unshift({ text: this.newTask, done: false });
