@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Courier New', Courier, monospace;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-image: url(https://media.istockphoto.com/id/1285308242/it/foto/per-fare-elenco-di-testo-nel-blocco-note.jpg?s=612x612&w=0&k=20&c=zWLaAD3Kai4m7aATWFG4Vd3oyr_ID8nu9IwzVQmqZM4=);
+  background-size: cover;
   }
   
   #app {
